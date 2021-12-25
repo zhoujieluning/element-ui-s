@@ -1,24 +1,20 @@
-# element-he
 
-## Project setup
-```
-yarn install
-```
+# element-ui 组件库
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### 快速开始
 
-### Compiles and minifies for production
+#### 1.安装组件库
+```bash
+    npm i element-he
 ```
-yarn build
+#### 2.引用组件库
+```javascript
+// 全部引入
+   import 'element-he/css/index.css'
+   import MUI from 'element-he'
+   Vue.use(element-he)
+// 按需引入
+    import 'element-he/css/index.css'
+    import {table} from 'element-he'
+    Vue.use(table)      
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
