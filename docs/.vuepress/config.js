@@ -1,12 +1,12 @@
 // .vuepress/config.js
 module.exports = {
-  base:'/element-uis/',
-  title:'Element-Uis',
+  base:'/element-ui-s/',
+  title:'element-ui-s',
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Github', link: 'https://github.com/ShuangDa1018/element-uis' },
-            { text: 'Npm', link: 'https://github.com' },
+            { text: 'Github', link: 'https://github.com/ShuangDa1018/element-ui-s' },
+            { text: 'Npm', link: 'https://www.npmjs.com/package/element-ui-s' },
           ],
       sidebar: [
         '/',
