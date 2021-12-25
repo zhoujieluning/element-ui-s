@@ -18,3 +18,5 @@
     import {table} from 'element-uis'
     Vue.use(table)      
 ```
+### 文档地址
+https://shuangda1018.github.io/element-uis/
