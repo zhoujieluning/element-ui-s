@@ -20,7 +20,7 @@
     "build:css": "npx gulp sass",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "deploy": "start deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
