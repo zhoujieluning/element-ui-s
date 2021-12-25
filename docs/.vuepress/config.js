@@ -1,5 +1,6 @@
 // .vuepress/config.js
 module.exports = {
+  base:'/element-uis/',
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
