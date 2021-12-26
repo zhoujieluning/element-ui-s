@@ -1,4 +1,4 @@
-# els-table
+# table
 ### 示例
 <els-form />
 ### 代码

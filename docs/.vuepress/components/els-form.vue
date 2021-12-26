@@ -1,12 +1,9 @@
 <template>
-  <div>你的美女这个 demo组件</div>
+  <els-form></els-form>
 </template>
 
 <script>
 export default {
-  name: "Demo",
+  name: 'table',
 };
 </script>
-
-<style>
-</style>

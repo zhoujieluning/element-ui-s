@@ -13,18 +13,23 @@
     "components"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "npm run docs:dev",
     "build": "npm run build:js && npm run build:css",
-    "lint": "vue-cli-service lint",
     "build:js": "webpack",
     "build:css": "npx gulp sass",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "start deploy.sh"
+    "deploy": "start deploy.sh",
+    "exmaples": "vue-cli-service serve",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "async-validator": "^1.11.5",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "countup.js": "^2.0.8",
+    "element-ui": "^2.15.6",
+    "vue": "^2.6.11",
+    "vue-highlight.js": "^2.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -36,9 +41,9 @@
     "gulp": "^4.0.2",
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^5.0.0",
-    "node-sass": "^5.0.0",
     "sass": "^1.45.1",
-    "sass-loader": "^5.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.9.4",

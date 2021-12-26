@@ -1,13 +1,21 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Demo />
+    <!-- <Demo /> -->
+    <button @click="handlePrint">全局print</button>
+    <button @click="handlePrint">局部print</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
+  methods: {
+    handlePrint() {
+      console.log(this.$Print);
+      this.$Print("#app");
+    },
+  },
 };
 </script>
 
