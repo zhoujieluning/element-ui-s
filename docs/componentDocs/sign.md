@@ -1,18 +1,15 @@
-# sign
-### 示例
-<els-form />
+# sign 电子签名
 
-### 代码
-```html
-<els-form />
-```
+<demo-block 
+title="示例"
+description="电子签名">
+  <md-sign  :endVal="520520520" ></md-sign>
+  <highlight-code slot="highlight" lang="vue">
+<<< @/docs/.vuepress/components/md/sign.vue
+  </highlight-code>
+</demo-block>
 
-### Attributes
-```base
-|参数|说明|类型|必填|默认值
-|----|----|----|----|----|
-|width|卡片宽度|Number|fasle|-|
-|heigth|卡片宽度|Number|fasle|-|
-|imgurl|卡片宽度|Number|fasle|-|
-|width|卡片宽度|Number|fasle|-|
-```
+
+
+
+<start />

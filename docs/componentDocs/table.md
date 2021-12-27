@@ -1,15 +1,15 @@
-# table
-### 示例
-<els-form />
-### 代码
-```html
-<els-form />
-```
+# video 视频
 
-### Attributes
-| 参数| 说明| 类型| 必填| 默认值
-| ----| ----| ----| ----| ----| 
-| width| 卡片宽度| Number| fasle| -| 
-| heigth| 卡片宽度| Number| fasle| -| 
-| imgurl| 卡片宽度| Number| fasle| -| 
-| width| 卡片宽度| Number| fasle|-|
+<demo-block 
+title="示例"
+description="调取原生的摄像头调用开始函数和结束函数，停止后即可获取录制片段">
+  <md-video/>
+  <highlight-code slot="highlight" lang="vue">
+<<< @/docs/.vuepress/components/md/video.vue
+  </highlight-code>
+</demo-block>
+
+
+
+
+<start />

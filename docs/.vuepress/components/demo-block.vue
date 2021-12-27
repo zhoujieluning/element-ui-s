@@ -226,7 +226,6 @@ export default {
     },
   },
   data() {
-    console.log(this.$slots);
     return {
       codepen: {
         script: '',
@@ -325,10 +324,6 @@ export default {
 
     codeAreaHeight() {
       if (this.$el.getElementsByClassName('description').length > 0) {
-        console.log(
-          this.$el.getElementsByClassName('description')[0],
-          this.$el.getElementsByClassName('highlight')[0]
-        );
         return (
           this.$el.getElementsByClassName('description')[0].clientHeight +
           this.$el.getElementsByClassName('highlight')[0].clientHeight +

@@ -1,43 +1,15 @@
-# print
+# print 打印
 
-### 示例
+<demo-block 
+title="示例"
+description="els-count-up是一个无依赖的轻量级 vue 组件，可以自己覆盖 easingFn。可以设置 startVal 和 endVal ，它会自动判断加计数或减计数。它支持vue-ssr。它是从 countUp.js 中学习的；">
+  <md-print  :endVal="520520520" ></md-print>
+  <highlight-code slot="highlight" lang="vue">
+<<< @/docs/.vuepress/components/md/print.vue
+  </highlight-code>
+</demo-block>
 
-<els-print />
 
-### 代码
 
-```html
-<template>
-  <div>
-    <el-button @click="print">局部打印</el-button>
-    <el-button @click="printAll">全局打印</el-button>
-    <div>
-      <h5 id="test" style="color: green">你看我是什么颜色</h5>
-      <!-- <img src="../.vuepress/public/logo.jpg" />
-      1 -->
-    </div>
-  </div>
-</template>
-<script>
-  export default {
-    name: 'els-print',
-    methods: {
-      printAll() {
-        this.$Print('#app');
-      },
-      print() {
-        this.$Print('#test');
-      },
-    },
-  };
-</script>
-```
 
-### Attributes
-
-| 参数   | 说明     | 类型   | 必填  | 默认值 |
-| ------ | -------- | ------ | ----- | ------ |
-| width  | 卡片宽度 | Number | fasle | -      |
-| heigth | 卡片宽度 | Number | fasle | -      |
-| imgurl | 卡片宽度 | Number | fasle | -      |
-| width  | 卡片宽度 | Number | fasle | -      |
+<start />

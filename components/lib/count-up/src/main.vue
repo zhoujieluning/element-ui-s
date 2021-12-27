@@ -1,7 +1,5 @@
 <template>
-  <span>
-    {{ displayValue }}
-  </span>
+  <span class="els-count-up">{{ displayValue }}</span>
 </template>
 <script>
 import {
@@ -213,3 +211,8 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+.els-count-up + .els-count-up {
+  margin-left: 10px;
+}
+</style>

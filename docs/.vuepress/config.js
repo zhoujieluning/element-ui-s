@@ -22,65 +22,36 @@ module.exports = {
               {
                 title:'简介',
                 path: 'guide/introduction',
-                collapsable: false, 
               },
               {
                 title:'快速上手',
                 path: 'guide/quick-start',
-                collapsable: false, 
               },
               {
                 title:'几点说明',
                 path: 'guide/tips',
-                collapsable: false, 
               },
               
             ]
           },
           {
             title:'文档',
-            collapsable: false, 
+            collapsable: true,
             children:[
               {
-                title:'form',
+                title:'form 表单',
                 path: 'form',
-                collapsable: true, 
-              },
-              {
-                title:'table',
-                path: 'table',
-                collapsable: false, 
-              },
-              {
-                title:'print',
-                path: 'print',
-                collapsable: false, 
-              },
-              {
-                title:'nprogress',
-                path: 'nprogress',
-                collapsable: false, 
-              },
-              {
-                title:'chat',
-                path: 'chat',
-                collapsable: false, 
-              },
-              {
-                title:'count-up',
-                path: 'count-up',
-                collapsable: false, 
-              },
-              {
-                title:'text-ellipsis',
-                path: 'text-ellipsis',
-                collapsable: false, 
-              },
-              {
-                title:'sign',
-                path: 'sign',
-                collapsable: false, 
-              },
+                collapsable: true, },
+              {title:'table 表格',path: 'table',},
+              {title:'print 打印',path: 'print',},
+              {title:'nprogress 进度条',path: 'nprogress',},
+              {title:'chat 客服聊天',path: 'chat',},
+              {title:'count-up 数字动画',path: 'count-up',},
+              {title:'text-ellipsis 超出文本省略',path: 'text-ellipsis',},
+              {title:'sign 电子签名',path: 'sign',},
+              {title:'video 摄像头',path: 'video',},
+              {title:'watermark 水印',path: 'watermark',},
+              {title:'screen-shot 截图',path: 'screenshot',},
             ]
           }
         ],

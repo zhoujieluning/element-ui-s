@@ -1,23 +1,15 @@
 # nprogress
-### 示例
 
-<els-nprogress />
+<demo-block 
+title="示例"
+description="els-count-up是一个无依赖的轻量级 vue 组件，可以自己覆盖 easingFn。可以设置 startVal 和 endVal ，它会自动判断加计数或减计数。它支持vue-ssr。它是从 countUp.js 中学习的；">
+  <md-nprogress  :endVal="520520520" ></md-nprogress>
+  <highlight-code slot="highlight" lang="vue">
+<<< @/docs/.vuepress/components/md/nprogress.vue
+  </highlight-code>
+</demo-block>
 
-### 代码
-```html
-<template>
-  <div>
-    <el-button type="primary" @click="$Nprogress.start()">开始</el-button>
-    <el-button type="danger" @click="$Nprogress.done()">停止</el-button>
-    <el-button type="warning" @click="$Nprogress.remove()">删除</el-button>
-  </div>
-</template>
-```
 
-### Attributes
-| 参数| 说明| 类型| 必填| 默认值
-| ----| ----| ----| ----| ----| 
-| width| 卡片宽度| Number| fasle| -| 
-| heigth| 卡片宽度| Number| fasle| -| 
-| imgurl| 卡片宽度| Number| fasle| -| 
-| width| 卡片宽度| Number| fasle|-|
+
+
+<start />
