@@ -435,6 +435,7 @@ export default create({
       let result = html;
       setTimeout(() => {
         const list = this.$refs.content;
+        if (!Array.isArray(list)) return; // 不加 vuepress报错
         list.forEach((ele) => {
           for (let i = 0; i < ele.children.length; i++) {
             const child = ele.children[i];

@@ -81,11 +81,11 @@ export default {
       default: false,
     },
     moveEvent: {
-      type: [Object, MouseEvent],
+      type: [Object],
       default: null,
     },
     leaveEvent: {
-      type: [Object, MouseEvent],
+      type: [Object],
       default: null,
     },
     hideZoom: {
@@ -120,7 +120,8 @@ export default {
       },
       imgInfo: {},
       $img: null,
-      screenWidth: document.body.clientWidth,
+      // screenWidth: document.body.clientWidth,
+      screenWidth: '',
       outShowInitTop: 0,
       outShowTop: 0,
       hideOutShow: true,
@@ -216,6 +217,7 @@ export default {
     this.url && this.lazyload && this.handlerUrlChange();
   },
   mounted() {
+    this.screenWidth = document.body.clientWidth;
     this.$img = this.$refs['img'];
   },
   methods: {
