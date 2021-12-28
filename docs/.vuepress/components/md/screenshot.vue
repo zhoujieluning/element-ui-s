@@ -42,7 +42,7 @@ export default {
   },
   computed: {
     flag() {
-      return this.form.img;
+      return !this.form.img;
     },
   },
   methods: {

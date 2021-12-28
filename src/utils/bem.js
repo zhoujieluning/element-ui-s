@@ -38,7 +38,6 @@ export default {
         el = '';
       }
       el = join(name, el, ELEMENT);
-
       return mods ? [el, prefix(el, mods)] : el;
     }
   }

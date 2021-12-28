@@ -1,7 +1,7 @@
 // .vuepress/config.js
 module.exports = {
   base:'/element-ui-s/',
-  title:'element-ui-s',
+  title:'Element-Ui-S',
   description: '开箱即用的组件库文档', //描述
     port: 1080, 
     head: [
@@ -19,45 +19,48 @@ module.exports = {
             title:'使用说明',
             collapsable: false,
             children: [
-              {
-                title:'简介',
-                path: 'guide/introduction',
-              },
-              {
-                title:'快速上手',
-                path: 'guide/quick-start',
-              },
-              {
-                title:'几点说明',
-                path: 'guide/tips',
-              },
-              
+              {title:'简介',path: 'guide/introduction',},
+              {title:'快速上手',path: 'guide/quick-start',},
+              {title:'vuepress说明',path: 'guide/tips',},
             ]
           },
-          {
-            title:'文档',
-            collapsable: true,
-            children:[
-              {
-                title:'form 表单',
-                path: 'form',
-                collapsable: true, },
+          {title:'组件',collapsable: false, },
+          {title:'form 表单', path: 'form', collapsable: true, },
               {title:'table 表格',path: 'table',},
               {title:'print 打印',path: 'print',},
               {title:'nprogress 进度条',path: 'nprogress',},
               {title:'chat 客服聊天',path: 'chat',},
+              {title:'keyboard 键盘',path: 'keyboard',},
               {title:'count-up 数字动画',path: 'count-up',},
-              {title:'text-ellipsis 超出文本省略',path: 'text-ellipsis',},
+              {title:'text-ellipsis 溢出省略',path: 'text-ellipsis',},
               {title:'sign 电子签名',path: 'sign',},
               {title:'video 摄像头',path: 'video',},
+              {title:'highlight-code 代码高亮',path: 'highlight-code',},
               {title:'watermark 水印',path: 'watermark',},
-              {title:'screen-shot 截图',path: 'screenshot',},
-            ]
-          }
+              {title:'screenshot 截图',path: 'screenshot',},
+              {title:'magnifie 放大镜',path: 'magnifie',},
+              {title:'dialogdrag 弹框拖拽',path: 'dialogdrag',},
         ],
-        // '/componentDocs/':[
-          
-        // ]
       }
-    }
+    },
+    plugins:[
+       // 官方回到顶部插件
+       '@vuepress/back-to-top',
+      //官方图片放大组件 目前是所有img都可以点击放大。具体配置见https://v1.vuepress.vuejs.org/zh/plugin/official/plugin-medium-zoom.html
+      ['@vuepress/medium-zoom',{selector: 'img'}],
+      ['@vssue/vuepress-plugin-vssue',{
+        // 设置 `platform` 而不是 `api` 我这里是在github平台
+        platform: 'github',
+
+        // owner与repo配置 https://github.com/${owner}/${repo}
+        // 例如我的仓库地址为https://github.com/1011cat/shotCat_doc 则owner为1011cat，repo为shotCat_doc
+        owner: 'your owner',
+        repo: 'your repo',
+
+        // 填写自己的OAuth App 信息。详见https://vssue.js.org/zh/options/#repo
+        clientId: 'clientId',
+        clientSecret: 'clientSecret',
+        locale: 'zh', //使用的语言  这里是简体中文
+        baseURL: 'https://github.com'}] //平台的 base URL
+    ]
   } 

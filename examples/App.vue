@@ -9,11 +9,10 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   methods: {
     handlePrint() {
-      console.log(this.$Print);
-      this.$Print("#app");
+      this.$Print('#app');
     },
   },
 };

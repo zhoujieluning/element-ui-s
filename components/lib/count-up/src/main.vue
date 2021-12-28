@@ -211,8 +211,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-.els-count-up + .els-count-up {
-  margin-left: 10px;
-}
-</style>

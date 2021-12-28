@@ -1,16 +1,11 @@
 <template>
   <canvas
-    class="els-sign"
+    style="border: 1px solid #ccc"
     :width="width"
     :height="height"
     ref="canvas"
   ></canvas>
 </template>
-<style lang="scss" scoped>
-.els-sign {
-  border: 1px solid #ccc;
-}
-</style>
 <script>
 export default {
   name: 'els-sign',

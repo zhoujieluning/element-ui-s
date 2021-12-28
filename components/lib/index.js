@@ -1,13 +1,17 @@
 import Form from './form'
 import Table from './table'
 import CountUp from './count-up'
+import TextEllipsis from './text-ellipsis'
 import Sign from './sign'
 import Video from './video'
+import Chat from './chat'
+import Magnifie from './magnifie'
 import Print from './print'
 import Watermark from './watermark'
-import TextEllipsis from './text-ellipsis'
+import Keyboard from './keyboard'
 import Screenshot from './screenshot'
 import Nprogress from './nprogress'
+import Dialogdrag from './dialogdrag'
 
 const components = [
     Form,
@@ -15,7 +19,10 @@ const components = [
     CountUp,
     Sign,
     Video,
-    TextEllipsis
+    TextEllipsis,
+    Chat,
+    Keyboard,
+    Magnifie
 ]
 const install = function(Vue){
     if(install.installed)return
@@ -26,6 +33,7 @@ const install = function(Vue){
     Vue.prototype.$Nprogress = Nprogress
     Vue.prototype.$Watermark = Watermark
     Vue.prototype.$Screenshot = Screenshot
+    Vue.directive('dialogdrag',Dialogdrag)
 }
 if(typeof window !== 'undefined'&&window.Vue){
     install(window.Vue)

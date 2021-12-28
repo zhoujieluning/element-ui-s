@@ -1,0 +1,69 @@
+<template>
+  <div class="md-keyboard">
+    <el-form :inline="true">
+      <el-form-item label="输入框1">
+        <el-input
+          ref="text"
+          id="text"
+          v-model="text"
+          placeholder="点击我，完后用虚拟键盘输入"
+        ></el-input>
+      </el-form-item>
+      <el-form-item label="输入框2">
+        <el-input
+          ref="text2"
+          id="text2"
+          v-model="text2"
+          placeholder="点击我，完后用虚拟键盘输入"
+        ></el-input>
+      </el-form-item>
+    </el-form>
+    <els-keyboard
+      ref="kb"
+      :ele="ele"
+      :keys="keys"
+      theme="dark"
+      @click="handleKeyboardClick"
+      style="width: 800px; height: 300px"
+    >
+    </els-keyboard>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      keys: null,
+      text: '',
+      text2: '',
+      ele: 'text',
+    };
+  },
+  mounted() {
+    this.$refs.text.focus();
+    // 自定义按键绑定click
+    this.$refs.kb.bindClick('清空', () => {
+      this[this.ele] = '';
+    });
+
+    // 模拟更换输入框
+    setTimeout(() => {
+      this.ele = 'text2';
+    }, 5000);
+  },
+  methods: {
+    // 键盘点击
+    handleKeyboardClick(key, val) {
+      this[this.ele] = val;
+    },
+  },
+};
+</script>
+<style >
+.md-keyboard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+</style>

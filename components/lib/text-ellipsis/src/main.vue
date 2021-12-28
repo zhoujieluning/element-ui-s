@@ -10,7 +10,7 @@
         <span :class="b('text')" ref="text" :key="keyIndex">{{ text }}</span>
       </span>
     </el-tooltip>
-    <span :class="b('more')" ref="more">
+    <span style="padding: 0 2px" ref="more">
       <slot name="more" v-show="oversize"></slot>
     </span>
     <slot name="after" :class="b('after')"></slot>
@@ -102,8 +102,3 @@ export default create({
   },
 });
 </script>
-<style lang="scss" scoped>
-.els-text-ellipsis__more {
-  padding: 0 2px;
-}
-</style>
