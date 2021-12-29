@@ -1,0 +1,54 @@
+
+
+## npm 安装
+推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
+```sh
+npm install element-ui-s-s 
+```
+
+## CDN
+目前可以通过 unpkg.com/element-ui-s 获取到最新版本的资源，在页面上引入 js 和 css 文件即可开始使用。
+```html
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui-s/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui-s/lib/index.js"></script>
+```
+:::tip
+我们建议使用 CDN 引入 Element 的用户在链接地址上锁定版本，以免将来 Element 升级时受到非兼容性更新的影响。锁定版本的方法请查看 unpkg.com。
+:::
+
+## Hello world
+通过 CDN 的方式我们可以很容易地使用 Element 写出一个 Hello world 页面。在线演示
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui-s/lib/theme-chalk/index.css">
+</head>
+<body>
+  <div id="app">
+    <el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog>
+  </div>
+</body>
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui-s/lib/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function() {
+        return { visible: false }
+      }
+    })
+  </script>
+</html>
+```
+
+<vssue/>

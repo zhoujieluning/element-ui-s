@@ -2,8 +2,8 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- <Demo /> -->
-    <button @click="handlePrint">全局print</button>
-    <button @click="handlePrint">局部print</button>
+    <button @click="handlePrint">examples是一个没用的文件夹</button>
+    <button @click="handlePrint">examples是一个没用的文件夹</button>
   </div>
 </template>
 

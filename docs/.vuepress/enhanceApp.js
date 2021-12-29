@@ -1,4 +1,5 @@
-import ElementUiS from '/components/lib/index.js';
+import ElementUiS from '/packages/lib/index.js'; // 本地引入element-ui-s
+import '/packages/theme-chalk/index.scss'
 
 import Element from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';

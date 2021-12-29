@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import  '../components/css/demo'
-import table from '../components/lib/table'
-import $Print from '../components/lib/print'
+import table from '../packages/lib/table'
+import $Print from '../packages/lib/print'
 Vue.config.productionTip = false
 
 Vue.use(table)

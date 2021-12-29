@@ -19,3 +19,4 @@ theme|	主题|	String|	default/green/dark/classic|	default
 
 
 <start />
+<vssue/>

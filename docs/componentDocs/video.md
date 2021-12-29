@@ -12,4 +12,4 @@ description="调取原生的摄像头调用开始函数和结束函数，停止�
 
 
 
-<start />
+<vssure />

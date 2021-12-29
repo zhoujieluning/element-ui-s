@@ -21,4 +21,4 @@ description="给网页打上水印">
 | color     | 字体颜色 | String | rgba(100,100,100,0.15) |
 | degree     | 文本旋转角度 | String | -20 |
 
-<start />
+<vssure />

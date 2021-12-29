@@ -15,12 +15,13 @@ module.exports = {
           ],
       sidebar: {
         '/componentDocs/':[
+          {title:'安装',path: 'guide/install',},
+          {title:'快速上手',path: 'guide/quick-start',},
           {
             title:'使用说明',
             collapsable: false,
             children: [
               {title:'简介',path: 'guide/introduction',},
-              {title:'快速上手',path: 'guide/quick-start',},
               {title:'vuepress说明',path: 'guide/tips',},
             ]
           },
@@ -54,12 +55,12 @@ module.exports = {
 
         // owner与repo配置 https://github.com/${owner}/${repo}
         // 例如我的仓库地址为https://github.com/1011cat/shotCat_doc 则owner为1011cat，repo为shotCat_doc
-        owner: 'your owner',
-        repo: 'your repo',
+        owner: 'ShuangDa1018',
+        repo: 'element-ui-s',
 
         // 填写自己的OAuth App 信息。详见https://vssue.js.org/zh/options/#repo
-        clientId: 'clientId',
-        clientSecret: 'clientSecret',
+        clientId: '5b7c3d23f228ad6d497c',
+        clientSecret: 'bfdab50ac2f22535844ac77d6484cc8c0274a8d3',
         locale: 'zh', //使用的语言  这里是简体中文
         baseURL: 'https://github.com'}] //平台的 base URL
     ]

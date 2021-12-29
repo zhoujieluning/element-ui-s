@@ -1,6 +1,6 @@
 {
   "name": "element-ui-s",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "未来成为鱿鱼溪的大神的组件库",
   "main": "dist/index.js",
   "keywords": [
@@ -10,7 +10,8 @@
   "author": "shuangda",
   "files": [
     "dist",
-    "components"
+    "src",
+    "packages"
   ],
   "scripts": {
     "serve": "npm run docs:dev",

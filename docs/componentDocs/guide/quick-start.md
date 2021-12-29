@@ -1,20 +1,10 @@
-## 安装
-
-安装  element-ui-s
-```sh
-npm install element-ui-s 
-```
 
 
-## 快速开始
+# 快速开始
 
-### 引入
-
+## 完整引入
+:::tip
 在 main.js 中写入以下内容：
-
-::: tip
-#### 全部引入
-
 ```js
 // main.js 全部引入 
 import Vue from 'vue';
@@ -22,8 +12,13 @@ import 'element-ui-s/css/index.css';
 import ElementUiS from 'element-ui-s';
 Vue.use(ElementUiS);
 ```
+:::
 
-#### 按需引入
+
+
+## 按需引入
+::: tip
+
  首先，安装 babel-plugin-component,借助该插件，我们可以只引入需要的组件，以达到减小项目体积的目的。
 ```sh
 npm install babel-plugin-component -D
@@ -59,7 +54,7 @@ Vue.component(Form.name, Form);
 :::
 
 ### 完整组件列表和引入方式
-完整组件列表和引入方式（完整组件列表以 /components/lib/index.js 为准）
+完整组件列表和引入方式（完整组件列表以 /packages/lib/index.js 为准）
 ```js
 // main.js
 import Vue from 'vue';
@@ -97,3 +92,4 @@ Vue.prototype.$Print = Print;
 
 
 <start />
+<vssure />

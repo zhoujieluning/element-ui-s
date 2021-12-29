@@ -18,4 +18,4 @@ type	|键盘类型|	String	|default/number	default
 theme|	主题|	String|	default/green/dark/classic|	default
 
 
-<start />
+<vssure />

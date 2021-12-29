@@ -9,7 +9,7 @@ async function makeList(dirPath,list){
         list[component] = `./${file}`
     }
 }
-makeList('components/lib',list)
+makeList('packages/lib',list)
 module.exports = {
     entry:list,
     mode:'development',
