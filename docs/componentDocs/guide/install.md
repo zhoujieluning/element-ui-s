@@ -30,10 +30,9 @@ npm install element-ui-s
 </head>
 <body>
   <div id="app">
-    <el-button @click="visible = true">Button</el-button>
-    <el-dialog :visible.sync="visible" title="Hello world">
-      <p>Try Element</p>
-    </el-dialog>
+    <els-count-up :endVal="endVal"></els-count-up>
+      <p>Try Element-Ui-S</p>
+    </el-keyboard>
   </div>
 </body>
   <!-- import Vue before Element -->
@@ -44,7 +43,7 @@ npm install element-ui-s
     new Vue({
       el: '#app',
       data: function() {
-        return { visible: false }
+        return { endVal: 520520 }
       }
     })
   </script>

@@ -1,15 +1,15 @@
 {
   "name": "element-ui-s",
-  "version": "0.1.1",
-  "description": "未来成为鱿鱼溪的大神的组件库",
-  "main": "dist/index.js",
+  "version": "0.1.5",
+  "description": "未来成为鱿鱼溪大神的组件库",
+  "main": "lib/index.js",
   "keywords": [
     "vue",
     "element-ui"
   ],
   "author": "shuangda",
   "files": [
-    "dist",
+    "lib",
     "src",
     "packages"
   ],

@@ -12,7 +12,7 @@ async function makeList(dirPath,list){
 makeList('packages/lib',list)
 module.exports = {
     entry:list,
-    mode:'development',
+    mode:'production',
     output:{
         filename:'[name].js',
         path:path.resolve(__dirname,'lib'),
