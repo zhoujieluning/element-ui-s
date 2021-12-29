@@ -8,7 +8,7 @@ https://shuangda1018.github.io/element-ui-s/
 #### 1.安装组件库
 
 ```sh
-    npm i element-ui-s
+    npm i element-ui-s 
 ```
 
 #### 2.引用组件库
