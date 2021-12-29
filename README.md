@@ -1,5 +1,8 @@
 # element-ui-s 组件库
 
+### 文档地址
+https://shuangda1018.github.io/element-ui-s/
+
 ### 快速开始
 
 #### 1.安装组件库
@@ -52,6 +55,3 @@ Vue.component(Form.name, Form);
  */
 ```
 
-### 文档地址
-
-https://shuangda1018.github.io/element-ui-s/
