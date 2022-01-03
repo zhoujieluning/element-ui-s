@@ -2,12 +2,12 @@
   <els-text-ellipsis
     :text="text"
     :height="100"
-    :width="200"
+    :width="300"
     :is-limit-height="isLimitHeight"
     @show="show"
     @hide="hide"
   >
-    <el-tag slot="before" size="small">new</el-tag>
+    <el-tag slot="before" size="small">news</el-tag>
     <small slot="more"
       ><span>...</span
       ><span class="link" @click="isLimitHeight = false">查看更多</span></small
@@ -25,7 +25,7 @@
 export default {
   data() {
     return {
-      text: '《华盛顿自由灯塔报》几天前报道称，美国国防部官员透露中国近日进行第十次东风-41洲际导弹的试射活动,这次试射中东风-41导弹投射了多个弹头并成功命中中国西部靶场目标。qq群qq群qq群qq群qq群qq群qq群qq群',
+      text: '文档中el开头（<el-button>）即是element-ui的组件,文档中els(els-count-up)开头即是element-ui-s的组件。qq 群：814333454qq 群：814333454qq 群：814333454qq 群：814333454qq 群：814333454qq 群：814333454qq 群：814333454',
       isLimitHeight: true,
     };
   },

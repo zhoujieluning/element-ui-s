@@ -1,4 +1,4 @@
-# keyboard 打印
+# keyboard 键盘
 
 <demo-block 
 title="示例"

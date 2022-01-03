@@ -144,7 +144,8 @@
     &.is-fixed {
       position: fixed;
       bottom: 0;
-      width: 868px;
+      max-width: 1000px; // 和styles里的.theme-default-content:not(.custom)相等
+      width: calc(100vw - 26rem);
     }
 
     i {

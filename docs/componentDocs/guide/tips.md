@@ -41,4 +41,4 @@ tableBody: [
 
 ## star组件说明
 那个看起来很炫的star组件，是由`https://codepen.io/sanzang/pen/LKvNPd` 代码修改而来。这里表示感谢！~
-<vssure />
+<vssue />

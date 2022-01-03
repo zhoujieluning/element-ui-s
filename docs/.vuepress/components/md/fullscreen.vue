@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <i
-      @click="handleFull(isfullscreen)"
-      :class="[isfullscreen ? 'el-icon-rank' : 'el-icon-full-screen', 'icon']"
-    ></i>
-  </div>
+  <i
+    @click="handleFull(isfullscreen)"
+    :class="[isfullscreen ? 'el-icon-rank' : 'el-icon-full-screen', 'icon']"
+  ></i>
 </template>
 
 <script>
@@ -23,8 +21,14 @@ export default {
 };
 </script>
 
-<style>
+<style >
 .icon {
   font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon:hover {
+  transform: scale(1.5);
+  color: red;
 }
 </style>

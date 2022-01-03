@@ -18,12 +18,12 @@ export default {};
   &__main-image {
     background: url('https://github.com/ShuangDa1018/element-ui-s/raw/gh-pages/logo.jpg')
       no-repeat center;
-    background-size: 200px;
+    background-size: 300px;
   }
   &__backside-image {
     background: url('https://github.com/ShuangDa1018/element-ui-s/raw/gh-pages/logo.jpg')
       no-repeat center;
-    background-size: 200px;
+    background-size: 300px;
     background-color: lighgray;
     opacity: 0.4;
   }

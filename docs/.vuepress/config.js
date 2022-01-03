@@ -37,7 +37,6 @@ module.exports = {
           {title:'nprogress 进度条',path: 'nprogress',},
           {title:'keyboard 键盘',path: 'keyboard',},
           {title:'print 打印',path: 'print',},
-          // {title:'print 打印',path: 'print',},
           {title:'qrcode 二维码',path: 'qrcode',},
           {title:'sign 电子签名',path: 'sign',},
           {title:'sticker 图片拖拽',path: 'sticker',},

@@ -12,4 +12,4 @@ description="网页顶部进度条，只需调用start()和done()来控制进度
 
 
 
-<vssure />
+<vssue />
