@@ -53,12 +53,10 @@ require('element-ui-s/lib/theme-chalk/count-up.css')
 ```
 
 ```js
-// main.js 按需引入 
+// main.js 按需引入 (组件，方法，指令3种)
 import Vue from 'vue';
-import { CountUp } from 'element-ui-s';
-Vue.component(CountUp.name, CountUp);
-/* 或写为
- * Vue.use(Table)
- * Vue.use(Form)
- */
+import { CountUp,Print，Dialogdrag } from 'element-ui-s';
+Vue.use(CountUp) // <els-countUp/>
+Vue.prototype.$Print = Print // this.$Print('#app')
+Vue.dreactive('dialogdrag',Dialogdrag) // v-dialogdrag
 ```

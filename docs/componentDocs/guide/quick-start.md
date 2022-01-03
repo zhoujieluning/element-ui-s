@@ -50,14 +50,12 @@ require('element-ui-s/lib/theme-chalk/count-up.css')
 ```
 
 ```js
-// main.js 按需引入 
+// main.js 按需引入 (组件，方法，指令3种)
 import Vue from 'vue';
-import { CountUp } from 'element-ui-s';
-Vue.component(CountUp.name, CountUp);
-/* 或写为
- * Vue.use(Table)
- * Vue.use(Form)
- */
+import { CountUp,Print，Dialogdrag } from 'element-ui-s';
+Vue.use(CountUp) // <els-countUp/>
+Vue.prototype.$Print = Print // this.$Print('#app')
+Vue.dreactive('dialogdrag',Dialogdrag) // v-dialogdrag
 ```
 
 :::
@@ -68,31 +66,45 @@ Vue.component(CountUp.name, CountUp);
 // main.js
 import Vue from 'vue';
 import {
-    Form,
-    Table,
-    CountUp,
-    Sign,
-    Video,
-    TextEllipsis,
-    Chat,
-    Keyboard,
-    Magnifie,
-    Nprogress,
-    Watermark,
-    Screenshot,
-    Print
+    Chat
+CountUp
+Dialogdrag
+Form
+Fullscreen
+HighlightCode
+Keyboard
+Magnifie
+Nprogress
+Print
+Qrcode
+Screenshot
+Sign
+Sticker
+Table
+TextEllipsis
+Typer
+Video
+Watermark
 } form 'element-ui-s'
-Vue.use(Table)
-Vue.use(CountUp)
-Vue.use(Video)
-Vue.use(TextEllipsis)
 Vue.use(Chat)
+Vue.use(CountUp)
+Vue.use(Form)
+Vue.use(HighlightCode)
 Vue.use(Keyboard)
 Vue.use(Magnifie)
-Vue.prototype.$Nprogress = Nprogress;
-Vue.prototype.$Watermark = Watermark;
-Vue.prototype.$Screenshot = Screenshot;
-Vue.prototype.$Print = Print;
+Vue.use(Qrcode)
+Vue.use(Sign)
+Vue.use(Sticker)
+Vue.use(Table)
+Vue.use(TextEllipsis)
+Vue.use(Typer)
+Vue.use(Video)
+Vue.prototype.$Print = Print
+Vue.prototype.$Nprogress = Nprogress
+Vue.prototype.$Watermark = Watermark
+Vue.prototype.$Screenshot = Screenshot
+Vue.prototype.$Fullscreen = Fullscreen
+Vue.directive('dialogdrag',Dialogdrag)
 ```
 
 

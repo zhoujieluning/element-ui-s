@@ -1,4 +1,4 @@
-# magnifie
+# magnifie 放大镜
 
 <demo-block 
 title="示例"

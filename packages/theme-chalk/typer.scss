@@ -62,73 +62,63 @@ $caret-complete-color: black;
 	animation: vue-typer-caret-expand 0.5s ease-in-out 0s infinite alternate;
 }
 
-
-span.caret {
-    &:empty:before {
-      content: '\200b'; // zero width space character
-    }
-  }
-  
-  /* Keep the following .caret styles as low-specificity as possible so they are more easily overridden */
-  span {
-    display: inline-block;
-    width: 1px;
-  }
-  
-  .idle {
-    background-color: $caret-idle-color;
-  }
-  
-  .typing {
-    background-color: $caret-typing-color;
-  }
-  
-  .selecting {
-    display: none;
-    background-color: $caret-selecting-color;
-  }
-  
-  .erasing {
-    background-color: $caret-erasing-color;
-  }
-  
-  .complete {
-    display: none;
-    background-color: $caret-complete-color;
-  }
-
-  .char {
-    display: inline-block;
-    white-space: pre-wrap;
-  }
+.els-typer{
+  // .char {
+  //   display: inline-block;
+  //   white-space: pre-wrap;
+  // }
   
   /* TODO: This can be removed in favor of the ':blank' pseudo-class:
            https://drafts.csswg.org/selectors-4/#the-blank-pseudo */
-  .newline {
-    display: inline;
-  }
+  // .newline {
+  //   display: inline;
+  // }
   
-  /* Keep the following .char styles as low-specificity as possible so they are more easily overridden */
-  .typed {
-    color: $char-typed-color;
-    background-color: $char-typed-background-color;
-  }
+  // /* Keep the following .char styles as low-specificity as possible so they are more easily overridden */
+  // .typed {
+  //   color: $char-typed-color;
+  //   background-color: $char-typed-background-color;
+  // }
   
-  .selected {
-    color: $char-selected-color;
-    background-color: $char-selected-background-color;
-  }
+  // .selected {
+  //   color: $char-selected-color;
+  //   background-color: $char-selected-background-color;
+  // }
   
-  .erased {
-    display: none;
-  }
-
-  span.vue-typer {
-    cursor: default;
-    user-select: none;
+  // .erased {
+  //   display: none;
+  // }
+  // span.caret {
+  //   &:empty:before {
+  //     content: '\200b'; // zero width space character
+  //   }
+  // }
   
-    span.left,
-    span.right {
-      display: inline;
-    }
-  }
+  /* Keep the following .caret styles as low-specificity as possible so they are more easily overridden */
+  // span {
+  //   display: inline-block;
+  //   width: 1px;
+  // }
+  
+  // .idle {
+  //   background-color: $caret-idle-color;
+  // }
+  
+  // .typing {
+  //   background-color: $caret-typing-color;
+  // }
+  
+  // .selecting {
+  //   display: none;
+  //   background-color: $caret-selecting-color;
+  // }
+  
+  // .erasing {
+  //   background-color: $caret-erasing-color;
+  // }
+  
+  // .complete {
+  //   display: none;
+  //   background-color: $caret-complete-color;
+  // }
+}

@@ -12,7 +12,9 @@
         <el-button @click="type0 = false" type="primary">确 定</el-button>
       </span>
     </el-dialog>
-    <el-button @click="type0 = true" type="warning">显示弹框</el-button>
+    <el-button @click="type0 = true" type="warning"
+      >显示element-ui弹框</el-button
+    >
   </div>
 </template>
 

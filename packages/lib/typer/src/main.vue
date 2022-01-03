@@ -1,5 +1,5 @@
 <template >
-  <div class="vue-typer">
+  <div class="vue-typer els-typer">
     <span class="left">
       <Char
         class="custom typed"

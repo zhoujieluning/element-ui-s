@@ -1,8 +1,8 @@
-# hignlight-code 高亮代码
+# hignlight-code 代码高亮
 
 <demo-block 
 title="示例"
-description="高亮代码">
+description="代码高亮，适用程序员的组件">
   <md-highlight-code></md-highlight-code>
   <highlight-code slot="highlight" lang="vue">
 <!-- <<< @/docs/.vuepress/components/md/hignlight-code.vue -->
