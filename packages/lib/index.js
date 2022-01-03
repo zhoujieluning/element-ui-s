@@ -7,11 +7,16 @@ import Video from './video'
 import Chat from './chat'
 import Magnifie from './magnifie'
 import Print from './print'
+import Qrcode from './qrcode'
 import Watermark from './watermark'
 import Keyboard from './keyboard'
+import Typer from './typer'
 import Screenshot from './screenshot'
+import Sticker from './sticker'
 import Nprogress from './nprogress'
+import Fullscreen from './fullscreen'
 import Dialogdrag from './dialogdrag'
+import HighlightCode from './highlight-code'
 
 const components = [
     Form,
@@ -22,7 +27,11 @@ const components = [
     TextEllipsis,
     Chat,
     Keyboard,
-    Magnifie
+    Magnifie,
+    HighlightCode,
+    Qrcode,
+    Typer,
+    Sticker
 ]
 const install = function(Vue){
     if(install.installed)return
@@ -33,6 +42,7 @@ const install = function(Vue){
     Vue.prototype.$Nprogress = Nprogress
     Vue.prototype.$Watermark = Watermark
     Vue.prototype.$Screenshot = Screenshot
+    Vue.prototype.$Fullscreen = Fullscreen
     Vue.directive('dialogdrag',Dialogdrag)
 }
 if(typeof window !== 'undefined'&&window.Vue){

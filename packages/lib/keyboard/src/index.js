@@ -4,7 +4,7 @@ export default class Keyboard {
       console.error('aKeyboard: The obj parameter needs to be an object <In "new aKeyboard()">');
       return;
     }
-
+    
     this.obj = obj;
 
     const el = document.querySelector(obj.el);
@@ -32,89 +32,96 @@ export default class Keyboard {
       ['Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\'],
       ['Caps', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', 'Enter'],
       ['Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', 'Shift'],
-      ['Space']
+      ['Ctrl','Alt','Space','Alt','Ctrl']
     ];
+    const classKey = [
+      ['192','49','50','51','52','53','54','55','56','57','48','189','187','8'],
+      ['9', '81', '87', '69', '82', '84', '89', '85', '73', '79', '80', '219', '221', '220'],
+      ['20', '65', '83', '68', '70', '71', '72', '74', '75', '76', '186', '220', '13'],
+      ['16', '90', '88', '67', '86', '66', '78', '77', '188', '190', '191', '16'],
+      ['17','18','32','18','17']
+    ]
 
-    let thisKeys;
-    const shiftKey = [],
-      capsKey = [];
+    let thisKeys
+    const shiftKeysList = [],
+      capsKeysList = [];
     for (let i = 0; i < keys.length; i++) {
-      shiftKey.push([]);
-      capsKey.push([]);
+      shiftKeysList.push([]);
+      capsKeysList.push([]);
       thisKeys = keys[i];
       for (let a = 0; a < thisKeys.length; a++) {
         if (thisKeys[a].length === 1) {
-          capsKey[i].push(thisKeys[a].toUpperCase());
+          capsKeysList[i].push(thisKeys[a].toUpperCase());
           switch (thisKeys[a]) {
             case '`':
-              shiftKey[i].push('~');
+              shiftKeysList[i].push('~');
               continue;
             case '1':
-              shiftKey[i].push('!');
+              shiftKeysList[i].push('!');
               continue;
             case '2':
-              shiftKey[i].push('@');
+              shiftKeysList[i].push('@');
               continue;
             case '3':
-              shiftKey[i].push('#');
+              shiftKeysList[i].push('#');
               continue;
             case '4':
-              shiftKey[i].push('$');
+              shiftKeysList[i].push('$');
               continue;
             case '5':
-              shiftKey[i].push('%');
+              shiftKeysList[i].push('%');
               continue;
             case '6':
-              shiftKey[i].push('^');
+              shiftKeysList[i].push('^');
               continue;
             case '7':
-              shiftKey[i].push('&');
+              shiftKeysList[i].push('&');
               continue;
             case '8':
-              shiftKey[i].push('*');
+              shiftKeysList[i].push('*');
               continue;
             case '9':
-              shiftKey[i].push('(');
+              shiftKeysList[i].push('(');
               continue;
             case '0':
-              shiftKey[i].push(')');
+              shiftKeysList[i].push(')');
               continue;
             case '-':
-              shiftKey[i].push('_');
+              shiftKeysList[i].push('_');
               continue;
             case '=':
-              shiftKey[i].push('+');
+              shiftKeysList[i].push('+');
               continue;
             case '[':
-              shiftKey[i].push('{');
+              shiftKeysList[i].push('{');
               continue;
             case ']':
-              shiftKey[i].push('}');
+              shiftKeysList[i].push('}');
               continue;
             case '\\':
-              shiftKey[i].push('|');
+              shiftKeysList[i].push('|');
               continue;
             case ';':
-              shiftKey[i].push(':');
+              shiftKeysList[i].push(':');
               continue;
             case '\'':
-              shiftKey[i].push('"');
+              shiftKeysList[i].push('"');
               continue;
             case ',':
-              shiftKey[i].push('<');
+              shiftKeysList[i].push('<');
               continue;
             case '.':
-              shiftKey[i].push('>');
+              shiftKeysList[i].push('>');
               continue;
             case '/':
-              shiftKey[i].push('?');
+              shiftKeysList[i].push('?');
               continue;
           }
-          shiftKey[i].push(thisKeys[a].toUpperCase());
+          shiftKeysList[i].push(thisKeys[a].toUpperCase());
           continue;
         }
-        shiftKey[i].push(thisKeys[a]);
-        capsKey[i].push(thisKeys[a]);
+        shiftKeysList[i].push(thisKeys[a]);
+        capsKeysList[i].push(thisKeys[a]);
       }
     }
 
@@ -122,30 +129,29 @@ export default class Keyboard {
       thisKeys = keys[i];
       html += '<div class="akeyboard-keyboard-innerKeys">';
       for (let a = 0; a < thisKeys.length; a++) {
-        html += '<div class="akeyboard-keyboard-keys akeyboard-keyboard-keys-' + thisKeys[a] + '">' + thisKeys[a] + '</div>';
+        html += `<div class="akeyboard-keyboard-keys akeyboard-keyboard-keys-${classKey[i][a]} ">${thisKeys[a]}</div>`;
       }
       html += '</div>';
     }
 
     html += '</div>';
-
+    const changeKeys = (keysArg)=>{
+      let thisEl;
+      const keysInnerEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-innerKeys');
+          for (let i = 0; i < keysInnerEl.length; i++) {
+            thisEl = keysInnerEl[i];
+            for (let a = 0; a < thisEl.childNodes.length; a++) {
+              thisEl.childNodes[a].innerHTML = keysArg[i][a];
+            }
+          }
+    }
     el.innerHTML = html;
-
-    let containShift = false;
-    keys.forEach(key => {
-      if (key.includes('Shift')) {
-        containShift = true;
-        return;
-      }
-    });
-    if (containShift) {
       // bind the shift and caps key
-      const elKeysEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-keys-Shift');
-
+      const elKeysEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-keys-16');
       elKeysEl.forEach(el => {
         el.onclick = function () {
           if (!this.isShift) {
-            const caps = document.querySelector(obj.el + ' .akeyboard-keyboard-keys-Caps');
+            const caps = document.querySelector(obj.el + ' .akeyboard-keyboard-keys-20');
             if (caps && caps.isCaps) {
               return;
             }
@@ -154,90 +160,69 @@ export default class Keyboard {
             el.isShift = true;
             el.innerHTML = 'SHIFT';
             this.classList.add('keyboard-keyboard-keys-focus');
-
-            const keysInnerEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-innerKeys');
-
-            let thisEl;
-            for (let i = 0; i < keysInnerEl.length; i++) {
-              thisEl = keysInnerEl[i];
-              for (let a = 0; a < thisEl.childNodes.length; a++) {
-                if (shiftKey[i][a] === 'Shift') {
-                  continue;
-                }
-                thisEl.childNodes[a].innerHTML = shiftKey[i][a];
-              }
-            }
-
+            changeKeys(shiftKeysList)
             return;
           }
           el.isShift = false;
           el.innerHTML = 'Shift';
           this.classList.remove('keyboard-keyboard-keys-focus');
-
-          const keysInnerEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-innerKeys');
-
-          let thisEl;
-          for (let i = 0; i < keysInnerEl.length; i++) {
-            thisEl = keysInnerEl[i];
-            for (let a = 0; a < thisEl.childNodes.length; a++) {
-              thisEl.childNodes[a].innerHTML = keys[i][a];
-            }
-          }
+          changeKeys(keys)
         };
       });
-
-    }
-
-    let containCaps = false;
-    keys.forEach(key => {
-      if (key.includes('Caps')) {
-        containCaps = true;
-        return;
-      }
-    });
-    if (containCaps) {
-      const elCapsEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-keys-Caps');
-
+    let isCaps=false
+      const elCapsEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-keys-20');
       elCapsEl.forEach(el => {
         el.onclick = function () {
-          if (!this.isCaps) {
-            const shift = document.querySelector(obj.el + ' .akeyboard-keyboard-keys-Shift');
+          if (!isCaps) {
+            const shift = document.querySelector(obj.el + ' .akeyboard-keyboard-keys-16');
             if (shift && shift.isShift) {
               return;
             }
-
-            // caps
-            this.isCaps = true;
             this.classList.add('keyboard-keyboard-keys-focus');
-
-            const keysInnerEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-innerKeys');
-
-            let thisEl;
-            for (let i = 0; i < keysInnerEl.length; i++) {
-              thisEl = keysInnerEl[i];
-              for (let a = 0; a < thisEl.childNodes.length; a++) {
-                thisEl.childNodes[a].innerHTML = capsKey[i][a];
-              }
-            }
-
-            return;
+            changeKeys(capsKeysList)
+          }else{
+            this.classList.remove('keyboard-keyboard-keys-focus');
+            changeKeys(keys)
           }
-
-          this.isCaps = false;
-          this.classList.remove('keyboard-keyboard-keys-focus');
-
-          const keysInnerEl = document.querySelectorAll(obj.el + ' .akeyboard-keyboard-innerKeys');
-
-          let thisEl;
-          for (let i = 0; i < keysInnerEl.length; i++) {
-            thisEl = keysInnerEl[i];
-            for (let a = 0; a < thisEl.childNodes.length; a++) {
-              thisEl.childNodes[a].innerHTML = keys[i][a];
-            }
-          }
+  
+            isCaps = !isCaps;
         };
       });
+    const addColor = (key)=>{
+      const dom = document.querySelector(`.akeyboard-keyboard-keys-${key}`)
+      if(!dom.style.background)dom.style.background = '#1e9fff'
     }
+    const removeColor = (key)=>{
+      const dom = document.querySelector(`.akeyboard-keyboard-keys-${key}`)
+      if(dom.style.background)dom.style.background = ''
+    }
+    
+    this.keydown =(e)=>{
+      let keyCode = e.keyCode
+      if(keyCode == '20')  { //Caps
+        if(isCaps) {
+          changeKeys(keys)
+          removeColor(keyCode)
+        }
+        else {
+          changeKeys(capsKeysList)
+          addColor(keyCode)
+        }
+        isCaps = !isCaps
+      }else{
+        if(keyCode == '16')  changeKeys(shiftKeysList)
+        addColor(keyCode)
+      }
+      
+    }
+    this.keyup =(e)=>{
+      let keyCode = e.keyCode
+      if(keyCode == '20') return //Caps
+      if(keyCode == '16') changeKeys(keys)//Shift
+      removeColor(keyCode)
+    }
+    document.addEventListener('keydown',this.keydown)
+    document.addEventListener('keyup',this.keyup)
   }
 
   inputOn (inputEle, type, fn, customClick) {
@@ -255,7 +240,7 @@ export default class Keyboard {
       elKeysEl = document.querySelectorAll(this.obj.el + ' .akeyboard-keyboard-keys');
 
     for (let i = 0; i < elKeysEl.length; i++) {
-      if (['Shift', 'Caps'].includes(elKeysEl[i].innerHTML)) {
+      if (['Shift', 'Caps', 'Ctrl','Alt'].includes(elKeysEl[i].innerHTML)) {
         continue;
       }
 

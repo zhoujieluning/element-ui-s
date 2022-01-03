@@ -13,3 +13,4 @@ description="一件截图轻松完成上传">
 
 
 <start />
+<vssue/>

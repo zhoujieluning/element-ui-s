@@ -70,7 +70,7 @@ export default create({
       };
       if (this.type == 'default') keyboard = new Keyboard(config);
       else if (this.type == 'number') keyboard = new NumberKeyboard(config);
-      else if (this.type == 'mobile') keyboard = new MobileKeyBoard(config);
+      else if (this.type == 'mobile') keyboard = new MobileKeyboard(config);
 
       const ele = this.ele.indexOf('#') == 0 ? this.ele.substring(1) : this.ele;
       keyboard.inputOn(

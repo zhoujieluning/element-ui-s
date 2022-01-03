@@ -23,7 +23,7 @@ export default {
       this.img = this.$refs.sign.submit(80, 50);
     },
     getStar() {
-      this.$refs.sign.getStar('这里是用途', '这里是单位的名称', '123456');
+      this.$refs.sign.getStar('双大组件库', '重庆理工大学毕业', '123456');
     },
   },
 };

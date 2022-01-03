@@ -12,4 +12,4 @@ description="elemtui 的 el-dialog组件，添加v-dialogdrag指令即可拖动"
 
 
 
-<start />
+<vssue/>

@@ -2,7 +2,7 @@
 
 <demo-block 
 title="示例"
-description="当问题太多时可以只展示部分，后面省略显示">
+description="当文字太多时可以只展示部分，后面省略显示">
   <md-text-ellipsis  :endVal="520520520" ></md-text-ellipsis>
   <highlight-code slot="highlight" lang="vue">
 <<< @/docs/.vuepress/components/md/text-ellipsis.vue
@@ -10,7 +10,7 @@ description="当问题太多时可以只展示部分，后面省略显示">
 </demo-block>
 
 
-### Variables
+### Attributes
 |参数|	说明|	类型	|可选值	|默认值|
 | :--------:   | -----  | ----- | :--------:   | -----  |
 text|	需要省略的文本|	String	-	-|

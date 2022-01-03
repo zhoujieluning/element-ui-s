@@ -1,7 +1,12 @@
 <template>
   <div>
-    <el-dialog title="提示" v-dialogdrag :visible.sync="type0" width="40%">
-      <span>这是一段信息</span>
+    <el-dialog
+      title="现在可以点这里拖动了"
+      v-dialogdrag
+      :visible.sync="type0"
+      width="40%"
+    >
+      <span>亲爱的双哥哥😘,到底多努力，才能得到你</span>
       <span slot="footer">
         <el-button @click="type0 = false">取 消</el-button>
         <el-button @click="type0 = false" type="primary">确 定</el-button>

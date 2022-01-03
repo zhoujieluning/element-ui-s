@@ -4,7 +4,7 @@ export default class MobileKeyboard {
       console.error('aKeyboard: The obj parameter needs to be an object <In "new aKeyboard()">');
       return;
     }
-
+    
     this.obj = obj;
 
     const el = document.querySelector(obj.el);

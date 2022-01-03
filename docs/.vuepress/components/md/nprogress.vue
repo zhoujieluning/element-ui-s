@@ -5,3 +5,10 @@
     <el-button type="warning" @click="$Nprogress.remove()">删除</el-button>
   </div>
 </template>
+<script>
+export default {
+  mounted() {
+    this.$Nprogress.done(); // 正常使用，不用加
+  },
+};
+</script>

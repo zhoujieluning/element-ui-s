@@ -6,10 +6,11 @@
     <el-button type="danger" @click="stopRecord" v-else>停止录制</el-button>
     <br /><br />
     <els-video
-      background="https://element-ui-sjs.com/images/face.png"
+      background="https://github.com/ShuangDa1018/element-ui-s/raw/gh-pages/face.png"
       @data-change="dataChange"
       ref="video"
     ></els-video>
+    <img src="" alt="" />
   </div>
 </template>
 <script>
