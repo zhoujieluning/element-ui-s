@@ -22,6 +22,9 @@ module.exports = {
     plugins:[
         new VueLoaderPlugin()
     ],
+    resolve:{
+        extensions:['.js','.vue']
+    },
     module:{
         rules:[
             {

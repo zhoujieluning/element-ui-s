@@ -32,7 +32,7 @@ module.exports = {
           {title:'chat 客服聊天',path: 'chat',},
           {title:'dialogdrag 弹框拖拽',path: 'dialogdrag',},
           {title:'fullscreen 全屏',path: 'fullscreen',},
-          {title:'highlight-code 代码高亮',path: 'highlight-code',},
+          // {title:'highlight-code 代码高亮',path: 'highlight-code',},
           {title:'magnifie 放大镜',path: 'magnifie',},
           {title:'nprogress 进度条',path: 'nprogress',},
           {title:'keyboard 键盘',path: 'keyboard',},
