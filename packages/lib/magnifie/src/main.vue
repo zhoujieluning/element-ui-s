@@ -25,7 +25,7 @@
       >
         <slot></slot>
       </div>
-      <div
+      <!-- <div
         v-if="outShow"
         v-show="!hideOutShow"
         :class="['img-out-show', { 'base-line': baseline }]"
@@ -38,7 +38,7 @@
         ]"
       >
         <div v-if="pointer" class="img-selector-point"></div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

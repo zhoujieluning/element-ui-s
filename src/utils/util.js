@@ -457,3 +457,20 @@ export const vaildData = (val, dafult) => {
   }
   return !validatenull(val) ? val : dafult;
 };
+
+// 防抖
+export const debounce = (fn,delay,isImmediate) =>{
+  let timer = null
+  return function(){
+    clearTimeout(timer)
+    if(isImmediate&&timer==null){
+      fn.apply(this,arguments)
+      timer = 0
+      return
+    }
+    timer = setTimeout(()=>{
+      fn.apply(this)
+      timer = null
+    },delay)
+  }
+}

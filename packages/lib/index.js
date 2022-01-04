@@ -9,6 +9,7 @@ import Magnifie from './magnifie'
 import Nprogress from './nprogress'
 import Print from './print'
 import Qrcode from './qrcode'
+import Scratch from './scratch'
 import Screenshot from './screenshot'
 import Sign from './sign'
 import Sticker from './sticker'
@@ -32,7 +33,8 @@ const components = [
     HighlightCode,
     Qrcode,
     Typer,
-    Sticker
+    Sticker,
+    Scratch
 ]
 const install = function(Vue){
     if(install.installed)return
