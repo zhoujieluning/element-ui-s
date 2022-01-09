@@ -26,7 +26,7 @@ module.exports = {
             ]
           },
           {title:'组件',collapsable: false, },
-          {title:'atest',path: 'atest',},
+          // {title:'atest',path: 'atest',},// 测试组件打开用()
           {title:'count-up 数字动画',path: 'count-up',},
           {title:'chat 客服聊天',path: 'chat',},
           {title:'dialogdrag 弹框拖拽',path: 'dialogdrag',},
