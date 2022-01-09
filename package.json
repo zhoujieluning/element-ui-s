@@ -1,6 +1,6 @@
 {
   "name": "element-ui-s",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "未来成为鱿鱼溪大神的组件库",
   "main": "lib/index.js",
   "keywords": [
@@ -44,6 +44,8 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "@vuepress/plugin-back-to-top": "^1.9.5",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
@@ -56,8 +58,7 @@
     "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.9.4",
-    "@vuepress/plugin-back-to-top": "^1.9.5",
-    "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
+    "vuepress-plugin-vue-demo": "^1.0.12",
     "webpack-cli": "^4.9.1"
   },
   "eslintConfig": {

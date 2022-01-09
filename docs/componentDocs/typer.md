@@ -1,14 +1,35 @@
 # typer 打字效果
 
-<demo-block 
-title="示例"
-description="模拟用户键入、选择和删除文本的Vue组件。">
-  <md-typer />
-  <highlight-code slot="highlight" lang="vue">
-<<< @/docs/.vuepress/components/md/typer.vue
-  </highlight-code>
-</demo-block>
+模拟用户键入、选择和删除文本的Vue组件。
+:::demo
+```vue
+<template>
+  <div>
+    <els-typer
+      class="typer-height"
+      text="亲爱的双哥哥😘,到底多努力，才能得到你"
+    ></els-typer>
+    <els-typer
+      class="typer-height"
+      text="求求你滚动到最底部，点那个star⭐吧，"
+      :shuffle="true"
+      preTypeDelay="3000"
+      preEraseDelay="6000"
+    ></els-typer>
+  </div>
+</template>
 
+<script>
+export default {};
+</script>
+
+<style>
+.typer-height {
+  min-height: 1.5em;
+}
+</style>
+```
+:::
 
 ### Attributes
 参数 | 说明 | 类型 | 可选值 |	默认值

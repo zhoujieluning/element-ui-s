@@ -1,15 +1,43 @@
 # fullscreen 全屏
+<test></test>
+开启、关闭全屏
+:::demo
+```vue
+<template>
+  <i
+    @click="handleFull(isfullscreen)"
+    :class="[isfullscreen ? 'el-icon-rank' : 'el-icon-full-screen', 'icon']"
+  ></i>
+</template>
 
-<demo-block 
-title="示例"
-description="开启、关闭全屏">
-  <md-fullscreen  :endVal="520520520" ></md-fullscreen>
-  <highlight-code slot="highlight" lang="vue">
-<<< @/docs/.vuepress/components/md/fullscreen.vue
-  </highlight-code>
-</demo-block>
+<script>
+export default {
+  data() {
+    return {
+      isfullscreen: false,
+    };
+  },
+  methods: {
+    handleFull(is) {
+      this.$Fullscreen(is);
+      this.isfullscreen = !this.isfullscreen;
+    },
+  },
+};
+</script>
 
-
-
+<style >
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon:hover {
+  transform: scale(1.5);
+  color: red;
+}
+</style>
+```
+:::
 
 <vssue/>

@@ -26,8 +26,7 @@ module.exports = {
             ]
           },
           {title:'组件',collapsable: false, },
-          // {title:'form 表单', path: 'form', collapsable: true, },
-          //     {title:'table 表格',path: 'table',},
+          {title:'atest',path: 'atest',},
           {title:'count-up 数字动画',path: 'count-up',},
           {title:'chat 客服聊天',path: 'chat',},
           {title:'dialogdrag 弹框拖拽',path: 'dialogdrag',},
@@ -68,6 +67,8 @@ module.exports = {
         clientId: '5b7c3d23f228ad6d497c',
         clientSecret: 'bfdab50ac2f22535844ac77d6484cc8c0274a8d3',
         locale: 'zh', //使用的语言  这里是简体中文
-        baseURL: 'https://github.com'}] //平台的 base URL
+        baseURL: 'https://github.com'}], //平台的 base URL
+       ['@vuepress/last-updated'],
+       [require('../vue-demo')]
     ]
   } 

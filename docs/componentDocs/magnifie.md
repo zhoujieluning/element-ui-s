@@ -1,15 +1,31 @@
 # magnifie 放大镜
 
-<demo-block 
-title="示例"
-description="放大镜，适用于电商等平台放大细节">
-  <md-magnifie  :endVal="520520520" ></md-magnifie>
-  <highlight-code slot="highlight" lang="vue">
-<<< @/docs/.vuepress/components/md/magnifie.vue
-  </highlight-code>
-</demo-block>
+
+放大镜，适用于电商等平台放大细节
+:::demo
+```vue
+<template>
+  <div class="magnifie-container">
+    <el-card shadow="hover">
+      <div slot="header"><span>放大镜1</span></div>
+      <els-magnifie
+        url="https://github.com/ShuangDa1018/element-ui-s/raw/gh-pages/logo.jpg"
+        type="circle"
+      ></els-magnifie>
+    </el-card>
+    <el-card shadow="hover">
+      <div slot="header"><span>放大镜2</span></div>
+      <els-magnifie
+        url="https://picsum.photos/960/540?random=2"
+        type="square"
+        :width="250"
+      ></els-magnifie>
+    </el-card>
+  </div>
+</template>
 
 
-
+```
+:::
 
 <start />

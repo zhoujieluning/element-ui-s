@@ -60,10 +60,10 @@ export default {
   },
   computed: {
     imgSelectorSize() {
-      const width = this.brushOptions.width;
+      const size = this.brushOptions.size;
       return {
-        width: `${width}px`,
-        height: `${width}px`,
+        width: `${size}px`,
+        height: `${size}px`,
       };
     },
   },
@@ -155,7 +155,7 @@ export default {
       const { currX, currY, lastX, lastY } = this.position;
       this.context.beginPath();
       this.context.globalCompositeOperation = 'destination-out';
-      this.context.lineWidth = this.brushOptions.width;
+      this.context.lineWidth = this.brushOptions.size;
       this.context.lineJoin = this.brushOptions.shape;
       this.context.moveTo(lastX, lastY);
       if (this.isPressed) {

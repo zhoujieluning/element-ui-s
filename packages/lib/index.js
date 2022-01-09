@@ -1,7 +1,6 @@
 import Chat from './chat'
 import CountUp from './count-up'
 import Dialogdrag from './dialogdrag'
-import Form from './form'
 import Fullscreen from './fullscreen'
 import HighlightCode from './highlight-code'
 import Keyboard from './keyboard'
@@ -13,7 +12,6 @@ import Scratch from './scratch'
 import Screenshot from './screenshot'
 import Sign from './sign'
 import Sticker from './sticker'
-import Table from './table'
 import TextEllipsis from './text-ellipsis'
 import Typer from './typer'
 import Video from './video'
@@ -21,8 +19,6 @@ import Watermark from './watermark'
 
 
 const components = [
-    Form,
-    Table,
     CountUp,
     Sign,
     Video,

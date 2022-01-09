@@ -1,15 +1,65 @@
 # scratch 刮刮乐
 
-<demo-block 
-title="示例"
-description="支持图片、视频、文件、地图等功能">
-  <md-scratch  :endVal="520520520" ></md-scratch>
-  <highlight-code slot="highlight" lang="vue">
-<<< @/docs/.vuepress/components/md/scratch.vue
-  </highlight-code>
-</demo-block>
+支持图片、视频、文件、地图等功能
+:::demo
+```vue
+<template>
+  <els-scratch
+    v-slot="{ init }"
+    :brushOptions="brush"
+    :hideOptions="hide"
+    getPercentageCleared
+    @percentage-update="updatePoints"
+  >
+    <div class="wrapper1">
+      <img
+        src="https://element.eleme.io/static/component.bd3411b.png"
+        @load="init()"
+      />
+      <h3>{{ subline }}</h3>
+    </div>
+  </els-scratch>
+</template>
 
+<script>
+export default {
+  computed: {
+    subline() {
+      return this.percentage < 100
+        ? `🎉 There is still ${
+            100 - this.percentage
+          }% left for me to be free... 🎉`
+        : '💚 Thank you for scratching me free! 💚';
+    },
+  },
+  data() {
+    return {
+      percentage: 0,
+      hide: {
+        src: require('/docs/.vuepress/public/cover.jpg'),
+        repeat: 'repeat',
+      },
+      brush: {
+        size: 60,
+        shape: 'round',
+      },
+    };
+  },
+  methods: {
+    updatePoints(percentage) {
+      this.percentage = percentage;
+    },
+  },
+};
+</script>
 
+<style>
+.wrapper1 {
+  width: 300px;
+}
+</style>
+```
+:::
 ### Attributes
 参数 | 说明 | 类型 | 可选值 |	默认值
 | --  | -- | :--: | :--: | --

@@ -1,15 +1,24 @@
 # qrcode 二维码
 
-<demo-block 
-title="示例"
-description="使用画布生成二维码的纯 JavaScript 库封装的vue组件">
-  <md-qrcode  :endVal="520520520" ></md-qrcode>
-  <highlight-code slot="highlight" lang="vue">
-<<< @/docs/.vuepress/components/md/qrcode.vue
-  </highlight-code>
-</demo-block>
-
-
+使用画布生成二维码的纯 JavaScript 库封装的vue组件
+:::demo
+```vue
+<template>
+  <div>
+    <els-qrcode :value="value" :size="300"></els-qrcode>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      value: '我是一个二维码',
+    };
+  },
+};
+</script>
+```
+:::
 ### Attributes
 参数|	说明|	类型	|可选值|	默认值
 | --------  | ------- | :------: | :------: |--
