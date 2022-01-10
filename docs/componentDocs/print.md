@@ -12,7 +12,7 @@
     <div id="test">
       <h3 class="print-red">你看我是什么颜色(过滤打印:隐藏)</h3>
       <h4 class="print-hidden">欢迎贡献组件(多过滤打印:隐藏)</h4>
-      <img  src="https://github.com/ShuangDa1018/element-ui-s/raw/gh-pages/logo.jpg" />
+      <img class="print-img" src="https://github.com/ShuangDa1018/element-ui-s/raw/gh-pages/logo.jpg" />
     </div>
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
 .print-red{
   color:red
 }
-img{
+.print-img{
   width:400px
 }
 </style>
