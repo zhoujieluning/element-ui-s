@@ -1,7 +1,7 @@
 # nprogress 进度条
 
-网页顶部进度条，只需调用start()和done()来控制进度条。
-:::demo
+网页顶部虚拟进度，无需多余控制
+:::demo只需调用start()和done()来控制进度条。
 ```vue
 <template>
   <div>
@@ -10,13 +10,6 @@
     <el-button type="warning" @click="$Nprogress.remove()">删除</el-button>
   </div>
 </template>
-<script>
-export default {
-  mounted() {
-    this.$Nprogress.done(); // 正常使用，不用加
-  },
-};
-</script>
 ```
 :::
 

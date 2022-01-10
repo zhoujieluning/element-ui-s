@@ -10,7 +10,7 @@
     <el-button @click="printFilter">过滤打印</el-button>
     <el-button @click="printFilterList">多过滤打印</el-button>
     <div id="test">
-      <h3 >你看我是什么颜色(过滤打印:隐藏)</h3>
+      <h3 class="print-red">你看我是什么颜色(过滤打印:隐藏)</h3>
       <h4 class="print-hidden">欢迎贡献组件(多过滤打印:隐藏)</h4>
       <img  src="https://github.com/ShuangDa1018/element-ui-s/raw/gh-pages/logo.jpg" />
     </div>
@@ -35,7 +35,7 @@ export default {
 };
 </script>
 <style>
-h3{
+.print-red{
   color:red
 }
 img{
@@ -44,7 +44,5 @@ img{
 </style>
 ```
 :::
-
-
 
 <start />

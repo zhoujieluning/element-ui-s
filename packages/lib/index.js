@@ -1,4 +1,5 @@
 import Chat from './chat'
+import Copy from './copy'
 import CountUp from './count-up'
 import Dialogdrag from './dialogdrag'
 import Fullscreen from './fullscreen'
@@ -37,6 +38,7 @@ const install = function(Vue){
     components.forEach(component=>{
         Vue.component(component.name,component)
     })
+    Vue.prototype.$Copy = Copy
     Vue.prototype.$Print = Print
     Vue.prototype.$Nprogress = Nprogress
     Vue.prototype.$Watermark = Watermark

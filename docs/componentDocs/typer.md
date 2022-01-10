@@ -13,8 +13,8 @@
       class="typer-height"
       text="求求你滚动到最底部，点那个star⭐吧，"
       :shuffle="true"
-      preTypeDelay="3000"
-      preEraseDelay="6000"
+      :preTypeDelay="3000"
+      :preEraseDelay="6000"
     ></els-typer>
   </div>
 </template>

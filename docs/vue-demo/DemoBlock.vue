@@ -247,7 +247,8 @@ export default {
       ];
     },
     blockClass() {
-      return `${this.$slots.source[0].tag} demo-${this.lang} demo-${
+      let str = `${this.$slots.source ? this.$slots.source[0].tag : ''};`;
+      return `${str} demo-${this.lang} demo-${
         this.$router.currentRoute.path.match(/([^\/]*?)(\.html)?$/)[1]
       }`;
     },

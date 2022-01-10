@@ -29,6 +29,7 @@ module.exports = {
           // {title:'atest',path: 'atest',},// 测试组件打开用()
           {title:'count-up 数字动画',path: 'count-up',},
           {title:'chat 客服聊天',path: 'chat',},
+          {title:'copy 复制',path: 'copy',},
           {title:'dialogdrag 弹框拖拽',path: 'dialogdrag',},
           {title:'fullscreen 全屏',path: 'fullscreen',},
           // {title:'highlight-code 代码高亮',path: 'highlight-code',},
