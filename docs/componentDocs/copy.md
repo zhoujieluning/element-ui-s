@@ -21,7 +21,7 @@ export default {
   methods: {
     handleCopy() {
       let mes = this.$Copy(this.text)
-      mes?this.$message.success('复制成功'):this.$message.error(mes);
+      mes?this.$message.error(mes):this.$message.success('复制成功')
     },
   },
 };

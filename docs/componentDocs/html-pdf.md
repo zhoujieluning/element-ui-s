@@ -22,11 +22,17 @@ export default {
       this.$HtmlPdf('#html-pdf', {
         backgroundColor: 'yellow',
         title: '我们是pdf文件',
+        scale:10
       });
     },
   },
 };
 </script>
+<style>
+.html-pdf{
+  width:500px
+}
+</style>
 ```
 :::
 
